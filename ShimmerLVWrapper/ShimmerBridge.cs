@@ -51,6 +51,45 @@ namespace ShimmerLVWrapper
         }
 
         // -----------------------------------------------------------------
+        // Write Sampling Rate
+        // -----------------------------------------------------------------
+        public void WriteSamplingRate(double rateHz)
+        {
+            try
+            {
+                if (_device == null || !_connected) return;
+
+                // WRITE_SAMPLING_RATE returns 0 on success
+                _device.WriteSamplingRate(rateHz);
+               
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("WriteSamplingRate error: " + ex.Message);
+            }
+        }
+
+        // -----------------------------------------------------------------
+        // Write Sensor Bitmap (enable/disable sensors)
+        // -----------------------------------------------------------------
+        public void WriteSensors(int sensorBitmap)
+        {
+            try
+            {
+                if (_device == null || !_connected) return;
+
+                // WriteSensors returns 0 on success
+                _device.WriteSensors(sensorBitmap);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("WriteSensors error: " + ex.Message);
+                
+            }
+        }
+
+
+        // -----------------------------------------------------------------
         // 3. Start Streaming
         // -----------------------------------------------------------------
         public bool StartStreaming()
