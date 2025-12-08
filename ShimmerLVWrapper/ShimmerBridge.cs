@@ -228,5 +228,23 @@ namespace ShimmerLVWrapper
 
             return false;
         }
+
+        // -----------------------------------------------------------------
+        // 6D. Get State
+        // -----------------------------------------------------------------
+        public int GetState()
+        {
+            try
+            {
+                if (_device == null) return -1;
+                return _device.GetState();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("GetState error: " + ex.Message);
+                return -1;
+            }
+        }
+
     }
 }
