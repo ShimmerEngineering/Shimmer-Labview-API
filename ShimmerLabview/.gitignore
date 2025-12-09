@@ -1,0 +1,75 @@
+# LabVIEW-specific files and folders
+#######################################
+
+# Compiled Code Files
+# These are generated when VIs are saved and compiled.
+*.llb
+*.lvlps
+*.aliases
+*.lvlib
+*.lvclass
+*.lvclass:
+*.lvclass:!
+*.lvclass.bak
+*.lvclass.bak:
+*.lvclass.bak:!
+*.lvclass.err
+*.lvlib:
+*.lvlib:!
+*.lvlib.bak
+*.lvlib.bak:
+*.lvlib.bak:!
+*.lvlib.err
+
+# Build and Distribution Files/Folders
+Builds/
+distributions/
+Installer/
+*.exe
+*.dll
+*.vip
+*.ogp
+/cgen/
+
+# Temporary and Cache Files
+# These are often unique to the local system/user
+**/*.cache/
+/temp/
+_local/
+
+# Project-specific generated files
+# The *.lvproj file *should* typically be tracked, but some temporary files
+# associated with it can be ignored.
+*.bak
+*.err
+*.lvs
+/Data/
+
+# Windows/OS generated files
+############################
+Thumbs.db
+Desktop.ini
+
+# Mac generated files
+#####################
+.DS_Store
+
+# IDE/Editor files (e.g., if you use VS Code, Sublime Text, etc.)
+#################################################################
+.vscode/
+.idea/
+*~
+
+# TestStand/Other NI-related files (if applicable)
+##################################################
+*.seq.bak
+*.seq.err
+
+# Important Note: .lvproj, .vi, .ctl, .vit files
+# The core project files like *.lvproj, *.vi, *.ctl, and *.vit are your source code
+# and should be **tracked** by Git (not ignored).
+
+# For Git to handle these LabVIEW files correctly, especially during merges,
+# you should also include a `.gitattributes` file in your repository root,
+# telling Git to treat them as binary files.
+#
