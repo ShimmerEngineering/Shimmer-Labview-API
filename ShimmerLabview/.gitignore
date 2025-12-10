@@ -26,7 +26,6 @@ Builds/
 distributions/
 Installer/
 *.exe
-*.dll
 *.vip
 *.ogp
 /cgen/
